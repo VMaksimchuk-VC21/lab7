@@ -71,6 +71,10 @@ def create_driver():
     return Driver(name)
 
 
+def print_driver(driver):
+    print(driver)
+
+
 def menu():
     company = None
     vehicle = None
@@ -89,24 +93,45 @@ def menu():
         point = input("Выберите пункт меню: ")
 
         if point == "1":
-            pass
+            company = create_company()
+            print("Фирма создана")
         elif point == "2":
-            pass
+            if company:
+                vehicle = create_vehicle(company)
+                company.add_vehicle(vehicle)
+                print("Транспорт создан")
+            else:
+                print("Сначала создайте фирму")
         elif point == "3":
-            pass
+            if vehicle:
+                driver = create_driver()
+                vehicle.add_driver(driver)
+                print("Водитель создан")
+            else:
+                print("Сначала создайте транспорт")
         elif point == "4":
-            pass
+            if company:
+                print(company)
+            else:
+                print("Сначала создайте фирму")
         elif point == "5":
-            pass
+            if vehicle:
+                print(vehicle)
+            else:
+                print("Сначала создайте транспорт")
         elif point == "6":
-            pass
+            if driver:
+                print_driver(driver)
+            else:
+                print("Сначала создайте водителя")
         elif point == "7":
-            pass
+            print("Выход из программы")
+            break
         else:
-            pass
+            print("Выберите верный пункт меню")
 
 
 if __name__ == "__main__":
     menu()
 
-    
+
