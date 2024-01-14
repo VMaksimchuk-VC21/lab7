@@ -55,14 +55,18 @@ class Driver:
         return f"Водитель: {self.name}"
 
 
+
 def create_company():
-    return
+    name = input("Введите название фирмы: ")
+    return TransportCompany(name)
 
 
-def create_vehicle():
-    return
+def create_vehicle(company):
+    model = input("Введите модель транспорта: ")
+    return Vehicle(model, company)
 
 
 def create_driver():
-    return
+    name = input("Введите имя водителя: ")
+    return Driver(name)
 
