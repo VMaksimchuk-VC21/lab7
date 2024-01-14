@@ -55,7 +55,6 @@ class Driver:
         return f"Водитель: {self.name}"
 
 
-
 def create_company():
     name = input("Введите название фирмы: ")
     return TransportCompany(name)
@@ -133,5 +132,4 @@ def menu():
 
 if __name__ == "__main__":
     menu()
-
 
