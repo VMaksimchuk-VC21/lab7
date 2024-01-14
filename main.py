@@ -54,3 +54,15 @@ class Driver:
     def __str__(self):
         return f"Водитель: {self.name}"
 
+
+def create_company():
+    return
+
+
+def create_vehicle():
+    return
+
+
+def create_driver():
+    return
+
